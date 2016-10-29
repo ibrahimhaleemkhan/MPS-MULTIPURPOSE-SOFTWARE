@@ -10,8 +10,9 @@ python:
   - "pypy3"
 install:
   - pip install python-coveralls
-script:
-  - coverage run setup.py test
-  - python setup.py speed
+  - pip install PIL
+  - pip install VideoCapture
+  - pip install Crypto.Cipher
+
 after_success:
   - coveralls
